@@ -1,0 +1,91 @@
+.post-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+  
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+  
+      p {
+        font-size: 0.8rem;
+        color: #777;
+      }
+    }
+  
+    .post-content {
+      margin: 1rem 0;
+      font-size: .9rem;
+      color: #2C323A;
+      font-weight: 400;
+      line-height: 1.42rem;
+      letter-spacing: 0.02rem;
+    }
+  
+    .post-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  
+    .post-footer {
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid #F1F5F9;
+        padding: 20px 0 0 0;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        
+        .btns-post {
+          display: flex;    
+        }
+      
+        input {
+          margin-top: 20px;
+          padding: 15px 10px;
+          border: none;
+          background-color: #F8FAFC;
+          color: #333; /* Warna teks saat diketik */
+          border-radius: 15px;
+          font-size: 0.9rem;
+      
+          /* Warna Placeholder */
+          &::placeholder {
+            color: #AABECF; /* Warna abu-abu sesuai desain */
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+        }
+      
+        span {
+          margin-right: 30px;
+          display: flex;
+          color: #AABECF;
+          font-weight: 500;
+          cursor: pointer;
+          font-size: .8rem;
+          align-items: center;
+      
+          .icon-post {
+            margin-right: 7px;
+            font-size: 20px;
+          }
+        }
+      }      
+  }
+  

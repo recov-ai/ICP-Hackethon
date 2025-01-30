@@ -1,0 +1,172 @@
+.dashboard-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .main-feed {
+    flex: 2;
+    margin-right: 430px; 
+  }
+  
+  .right-sidebar {
+    width: 400px;
+    position: fixed;
+    right: 2rem;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-box {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  
+    textarea {
+      width: 100%;
+      height: 120px;
+      border: none;
+      outline: none;
+      padding: 20px;
+      font-family: "Plus Jakarta Sans", serif;
+      font-size: 1rem;
+      background-color: #F4F7F9;
+      border-radius: 16px;
+      margin-bottom: 20px;
+
+      &::placeholder {
+        color: #AABECF; 
+        font-weight: 400;
+      }
+    }
+  
+    .post-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 2px solid #F1F5F9;
+  
+      .post-btn {
+        background-color: #6c63ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .input-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: #7D90AE;
+        border: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+
+        .icon-input {
+            width: 30px;
+            margin-right: 10px;
+        }
+      }
+    }
+  }
+  
+  .ad-box {
+    background: #ff6b6b;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  
+    .chat-now {
+      background: white;
+      color: #ff6b6b;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+  
+  .recommendation {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        font-size: .9rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+}
+  
+
+.carousel-advertisement {
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: #ffff;
+    overflow: hidden;
+  
+    .carousel-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 5px;
+  
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    /* Posisi dots ke kanan */
+    .slick-dots {
+        right: 0; /* Geser ke kanan */
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+    }
+
+    .slick-dots li {
+        margin: 0; /* Merapatkan dots */
+    }
+  
+    /* Default dot */
+    .slick-dots li button {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #EBF1F4;
+        border: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .slick-dots li button:before {
+        display: none; /* Menghilangkan dot hitam default */
+    }
+  
+    /* Mengubah dot aktif menjadi lebih panjang */
+    .slick-dots li.slick-active button {
+        width: 15px; /* Lebarkan dot aktif */
+        height: 8px;
+        border-radius: 20px; /* Agar tetap oval */
+        background-color: #6c63ff;
+    }
+}

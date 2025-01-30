@@ -1,0 +1,292 @@
+.report-container {
+    padding: 2rem;
+}
+
+.report-wallet {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Pastikan elemen memiliki tinggi penuh */
+    gap: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.report-statistics {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    flex-grow: 1; /* Biarkan elemen ini mengambil ruang tersisa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Pastikan tidak terlalu kecil */
+}
+
+.chart-container {
+    width: 100%;
+    height: 350px; /* Ubah tinggi sesuai kebutuhan */
+}
+
+.history {
+    background-color: #595BD4;
+}
+
+.report-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    gap: 2rem;
+    align-self: stretch; /* Pastikan tinggi mengikuti parent */
+}
+
+.summary-card-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    .summary-detail {
+        padding: 2rem 1.5rem;
+    }
+
+    .header-summary {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #495057;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  
+    .increase {
+      font-size: 0.9rem;
+      color: #16a34a;
+      display: flex;
+      align-items: center;
+    }
+}
+
+
+
+  .statistic {
+    background-color: #3CB9DB;
+  }
+
+  .report-icon {
+    color: white;
+  }
+
+  .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .report-title {
+        display: flex;
+        align-items: center;
+    }
+  }
+
+  .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+  
+    button {
+      background: none;
+      border: none;
+      color: #3CB9DB;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button.active {
+      background: #3CB9DB;
+      color: white;
+    }
+  }
+  
+  .summary-icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    padding: 6px ;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+  }
+  
+  .earnings {
+    background: #F9CA24;
+    color: black;
+}
+
+.customers {
+    background: #20BF6B;
+}
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+
+    .summary-icp-price {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        img {
+            margin-right: 10px;
+            width: 40px;
+        }
+    }
+}
+
+.summary-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.summary-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.summary-currency {
+    font-size: 0.9rem;
+    color: #94A9C0;
+    font-weight: 500;
+}
+
+.summary-label {
+    font-size: 0.9rem;
+    color: #7d90ae;
+}
+
+.gap-detail {
+    margin-top: 15px;
+}
+
+.summary-growth {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #C3D4DE;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.growth-icon {
+    color: #16a34a;
+}
+
+.growth-percentage {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.growth-label {
+    color: #7d90ae;
+}
+
+.report-history {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.history-table {
+  overflow-x: auto;
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; // Mencegah kolom melar tidak rata
+    font-size: 14px;
+    .header-history-table {
+      background: #f7f7f7;
+      font-weight: 600;
+      border-radius: 2rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle; // Menjaga elemen tetap sejajar
+  }
+
+  th:first-child {
+      border-top-left-radius: 10px;
+  }
+  th:last-child {
+      border-top-right-radius: 10px;
+  }
+  .table-avatar {
+    width: 40px;  // Ukuran avatar lebih kecil
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  td:first-child {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .status {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .done {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+
+  .price-idr {
+    color: #7d90ae;
+    font-size: 0.9rem;
+  }
+}
+  
+.header-history {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+
+    p{
+        font-weight: 600;
+        color: #2C323A;
+    }
+}
+
+.history-icon {
+    font-size: 2rem;
+    margin-right: 8px;
+    padding: 6px ;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+  }

@@ -1,0 +1,168 @@
+.consultant-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.consultant-name {
+    color: #2C323A;
+    font-weight: 500;
+}
+
+.consultant-feed {
+  flex: 2;
+  margin-right: 430px; 
+
+  border-radius: 15px;
+}
+
+.back-icon {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #595BD4;
+    font-size: .8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.consultant-title-section {
+    display: flex;
+    align-items: center;
+
+    margin: 20px 0;
+
+    p{
+        font-weight: 600;
+        color: #2C323A;
+    }
+}
+
+.consultation-suggested {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 7px;
+    background-color: #20BF6B;
+    color: white;
+    border-radius: 50%;
+}
+
+.icon-title {
+    font-size: 1.2rem;
+}
+
+.consultation-section {
+    background: white;
+    padding: 2rem; /* Kurangi padding agar lebih ringkas */
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.consultant-footer {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.consultation-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Grid Layout */
+.consultation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dinamis */
+    gap: 1rem;
+}
+
+/* Card Styles */
+.consultation-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.consultant-avatar {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #e0e0e0;
+}
+
+.consultant-info {
+    display: flex;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.consultant-exp,
+.consultant-rating {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #f1f5f9;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.consultant-icp {
+    width: 1.7rem;
+    margin-right: 5px;
+}
+
+.icon {
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.star-icon {
+    color: #facc15;
+}
+
+
+/* Price */
+.consultant-price {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #2C323A;
+    margin: 0.5rem 0;
+}
+
+/* Chat Button */
+.chat-button {
+    display: flex;
+    align-items: center;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    .icon-chat {
+        margin-right: 10px;
+    }
+}
+
+.chat-button:hover {
+    background-color: #595bd4;
+}

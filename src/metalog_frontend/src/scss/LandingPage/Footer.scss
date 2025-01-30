@@ -1,0 +1,36 @@
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: #595BD4;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+    .content-footer {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      align-items: center;
+      gap: 0.5rem; 
+
+      color: white;
+      
+      p {
+        margin: 0; 
+        color: white;
+
+      }
+  
+      .border {
+        margin: 0 0.5rem; 
+        color: white; 
+        font-size: 14px; 
+      }
+    }
+  }
+  

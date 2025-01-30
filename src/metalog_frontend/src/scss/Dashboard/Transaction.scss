@@ -1,0 +1,177 @@
+.transaction-container {
+    padding: 2rem;
+  }
+
+  .transaction-section {
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .transaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      span {
+        color: #3b82f6;
+      }
+    }
+  
+    .icon-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
+      .icon {
+        font-size: 1.5rem;
+        color: #64748b;
+        cursor: pointer;
+      }
+  
+      .user-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    .section-icon {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    
+    .order {
+      background-color: #3CB9DB;
+    }
+    
+    .history {
+      background-color: #595BD4;
+    }
+  }
+  
+  .transaction-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    th, td {
+      text-align: left;
+      padding: 20px 12px;
+      font-weight: 300;
+
+      .price-idr {
+        color: #7D90AE;
+        font-size: .9rem;
+      }
+    }
+  
+    th {
+      background: #f7f7f7;
+      font-weight: 600;
+    }
+  
+    .table-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  
+    .status {
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+  
+    .scheduled {
+      background-color: #e0f2fe;
+      color: #0284c7;
+    }
+  
+    .cancelled {
+      background-color: #fee2e2;
+      color: #b91c1c;
+    }
+  
+    .done {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+  
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .action-btn {
+      display: flex;
+    }
+  
+    .cancel-btn {
+      color: #ef4444;
+      background: transparent;
+    }
+  
+    .chat-btn {
+      background-color: #6366f1;
+      color: white;
+    }
+  
+    .summary-btn {
+      color: #595BD4;
+      background: transparent;
+    }
+  
+    button:hover {
+      opacity: 0.85;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    th, td {
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+  
+    button {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }
+  

@@ -1,30 +1,33 @@
-import { useState } from 'react';
-import { metalog_backend } from 'declarations/metalog_backend';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import NotFound from './components/NotFound';
+import Psikologis from './pages/Psikologis';
+import Consultant from './pages/Consultant';
+import Payment from './pages/Payment';
+import Transaction from './pages/Transaction';
+import EditProfile from './pages/EditProfile';
+import Summary from './pages/Summary';
+import Report from './pages/Report';
+import Consultation from './pages/Consultation';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    metalog_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/psychologist" element={<Psikologis />} />
+        <Route path="/consultant" element={<Consultant />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/transaction" element={<Transaction />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
+        <Route path="/summary" element={<Summary />} />
+        <Route path="/report" element={<Report />} />
+        <Route path="/consultation" element={<Consultation />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

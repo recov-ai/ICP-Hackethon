@@ -1,0 +1,98 @@
+.psychologist-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  
+    .psychologist-img {
+      width: 70px;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .psychologist-info {
+      flex-grow: 1;
+      margin-left: 10px;
+  
+      h4 {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+  
+      .psychologist-details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0;
+  
+        .experience,
+        .rating {
+          display: flex;
+          align-items: center;
+          font-size: 0.8rem;
+          color: #7D90AE;
+          background: #F3F6FB;
+          padding: 4px 8px;
+          border-radius: 5px;
+          font-weight: 500;
+        }
+
+        .icon {
+          margin-right: 5px;
+          font-size: 0.8rem;
+        }
+  
+        .star {
+          color: #FFD700;
+        }
+      }
+  
+      .price {
+        font-weight:500;
+        font-size: 0.8rem;
+      }
+      .info-price {
+        display: flex;
+        
+    }
+
+        .info-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            
+            .detail-price {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 25px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+  
+    .chat-btn {
+      background: #6c63ff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+  
+      &:hover {
+        background: #5b55e6;
+      }
+    }
+  }
+  

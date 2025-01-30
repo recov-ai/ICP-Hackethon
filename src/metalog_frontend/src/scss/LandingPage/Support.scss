@@ -1,0 +1,51 @@
+.support {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 0 2rem 0;
+  
+    background-color: #f4f8fb;
+  
+    .content-text {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 2rem 0;
+  
+      &:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      h1 {
+        font-weight: 600;
+        color: #4B5564;
+        font-size: 1.8rem;
+        width: 35%;
+    }
+    p {
+        font-size: 14px;
+        width: 50%;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: #6A7B98;
+      }
+    }
+  
+    .content-img {
+      width: 100%;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+  
+      img {
+        width: 100%; 
+        height: auto; 
+        object-fit: contain; 
+      }
+    }
+  }
