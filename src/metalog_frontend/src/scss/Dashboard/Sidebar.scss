@@ -1,93 +1,194 @@
 .sidebar {
-    background-color: #ffffff; /* Tambahkan background */
-    width: 260px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 1rem;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Tambahkan background */
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
 
-  .sidebar-header {
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  .logo {
+    width: 140px;
+  }
+}
+
+.wallet-address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+
+  .wallet-label {
+    font-size: 12px;
+  }
+}
+
+.icon-balance {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  color: white;
+  font-size: 1rem;
+  padding: 8px;
+  background-color: #595BD4;
+  border-radius: 50%;
+
+}
+
+.balance-user{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+
+  .balance-icp {
     display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    .logo {
-      width: 120px;
+    align-items: center;
+    
+    p {
+      margin-left: 10px;
+      font-size: 1rem;
+      color: #2C323A;
+      font-weight: 600;
     }
   }
 
-  .balance {
-    background-color: #f8f9fd;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 2rem;
+  h5 {
+    font-size: .8rem;
+    color: #7D90AE;
+    margin-top: 2px;
+    font-weight: 500;
+  }
+
+  img {
+    width: 30px;
+  }
+}
+
+.balance {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #EBF1F4;
+
+
+  .header-balance {
+    display: flex;
+    align-items: center;
 
     p {
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-      color: #333;
-      margin-top: 0.5rem;
-    }
-
-    .wallet {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 0.5rem;
+      font-weight: 500;
+      color: #2C323A;
     }
   }
 
-  .sidebar-menu {
-    ul {
-      list-style: none;
-      padding: 0;
-  
-      li {
+  p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+
+  .wallet {
+    display: flex;
+    align-items: center;
+    p{
+      font-size: 0.8rem;
+      color: #2C323A;
+      margin-top: 0.1rem;
+    }
+
+    .icon-wallet {
+      margin-left: 5px;
+      color: #AABECF;
+    }
+  }
+}
+
+.sidebar-menu {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, border 0.3s;
+      
+      &:hover {
+        border-radius: 5px;
+        background-color: #e6e7ff;
+      }
+
+      .menu-item {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        padding: 10px;
-        font-size: 1rem;
-        cursor: pointer;
-        color: #333;
-        border-radius: 5px;
-        transition: background 0.3s;
-  
-        &:hover {
-          background-color: #e6e7ff;
-        }
-  
-        .icon {
-          font-size: 1.4rem; 
-          color: #6c63ff; 
-        }
+        text-decoration: none;
+        color: #6A7B98;
+        width: 100%;
+        border:none;
+        padding: 8px;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        color: #6A7B98;
+      }
+
+      span {
+        font-weight: 600;
+        margin-left: 10px;
+        font-size: .9rem;
+        color: #6A7B98;
+      }
+    }
+
+    /* Style untuk menu yang aktif */
+    .active {
+      border-left: 5px solid #6c63ff; /* Border ungu di sisi kiri */
+      border-radius: 5px 0 0 5px; // Tumpul di sisi kiri saja
+
+      .menu-item {
+        color: #6c63ff; /* Warna teks berubah menjadi ungu */
+      }
+
+      .icon {
+        color: #6c63ff; /* Warna ikon berubah menjadi ungu */
       }
     }
   }
-  
+}
 
-  .post-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #6c63ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+.post-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 10px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: .9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
-    &:hover {
-      background-color: #5b55e6;
-    }
+  &:hover {
+    background-color: #5b55e6;
   }
+}
 }

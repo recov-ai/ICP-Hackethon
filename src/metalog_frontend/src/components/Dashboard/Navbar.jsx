@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBell, FaCog, FaUserCircle } from 'react-icons/fa';
+import { RiSettings3Line, RiNotification2Line } from "react-icons/ri";
 import '../../scss/Dashboard/Navbar.scss';
 
 const Navbar = () => {
@@ -10,9 +11,13 @@ const Navbar = () => {
         <p>Welcome back, let's explore now!</p>
       </div>
       <div className="navbar-right">
-        <FaBell className="icon" />
-        <FaCog className="icon" />
-        <FaUserCircle className="avatar" />
+        <div className='border-icon-navbar'>
+          <RiNotification2Line className="icon" />
+        </div>
+        <div className='border-icon-navbar'>
+          <RiSettings3Line className="icon" />
+        </div>
+        <img src='/images/profile6.png' className="avatar" />
       </div>
     </nav>
   );
