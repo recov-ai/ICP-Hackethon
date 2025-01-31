@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Home from './pages/Home';
-import NotFound from './components/NotFound';
-import Psikologis from './pages/Psikologis';
-import Consultant from './pages/Consultant';
-import Payment from './pages/Payment';
-import Transaction from './pages/Transaction';
-import EditProfile from './pages/EditProfile';
-import Summary from './pages/Summary';
-import Report from './pages/Report';
-import Consultation from './pages/Consultation';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
+import NotFound from "./components/NotFound";
+import Psikologis from "./pages/Psikologis";
+import Consultant from "./pages/Consultant";
+import Payment from "./pages/Payment";
+import Transaction from "./pages/Transaction";
+import EditProfile from "./pages/EditProfile";
+import Summary from "./pages/Summary";
+import Report from "./pages/Report";
+import Consultation from "./pages/Consultation";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/psychologist" element={<Psikologis />} />
         <Route path="/consultant" element={<Consultant />} />
         <Route path="/payment" element={<Payment />} />
