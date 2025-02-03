@@ -4,7 +4,6 @@
 
 **Metalog** is a decentralized mental health platform that prioritizes **security and anonymity** using **Internet Computer Protocol (ICP)**. This application provides professional psychologist consultations, an AI assistant, and a mental health community within a **secure and trusted ecosystem**.  
 
-
 ---
 
 ## 🚀 **Key Features**  
@@ -53,16 +52,12 @@ VITE_AUTH_PROVIDER=https://identity.ic0.app
 
 ### **3️⃣ Run on Local Network**
 ```sh
-# Start ICP locally
 dfx start --background
 
-# Remove old build files
 rm -rf .dfx node_modules .vite
 
-# Deploy backend & frontend locally
 dfx deploy --network local
 
-# Run the frontend in development mode
 npm run dev
 
 ```
@@ -71,12 +66,12 @@ npm run dev
 - 👉 Frontend: http://localhost:5173/?canisterId=<CANISTER_ID_METALOG_FRONTEND>
 - 👉 Backend Candid UI: http://127.0.0.1:4943/?canisterId=<CANISTER_ID_METALOG_BACKEND>
 
-### **4️⃣ Deploy ke Mainnet ICP**
-Untuk deploy ke jaringan utama ICP:
+### **4️⃣ Deploy to ICP Mainnet**
+To deploy to the ICP main network:
 ```sh
 dfx deploy --network ic
 ```
-🔹 Setelah selesai, gunakan canister ID baru untuk .env sebelum menjalankan ulang aplikasi.
+🔹 Once complete, use the new canister ID for the .env before restarting the application.
 
 ---
 
