@@ -187,4 +187,4 @@ MIT License
 
 *This project is licensed under the MIT License. You can modify, use and distribute according to your needs.*
 
-![Copyright (c) 2025 Metalog](https://mit-license.org/)
+[Copyright (c) 2025 Metalog](https://mit-license.org/)
