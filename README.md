@@ -183,13 +183,8 @@ metalog/
 ```
 
 ## 📜 **Lisensi - MIT License**
-
-<div align="center">
-
 **MIT License**  
 
 *This project is licensed under the MIT License. You can modify, use, and distribute according to your needs.*  
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://mit-license.org/)  
-
-</div>
