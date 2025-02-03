@@ -6,9 +6,13 @@ Metalog adalah platform kesehatan mental yang mengutamakan keamanan dan anonimit
 
 ## 🚀 Fitur Utama
 •⁠  ⁠*🩺 Konsultasi Profesional* – Sesi privat dengan psikolog bersertifikat, memberikan kenyamanan dan anonimitas bagi pengguna.
+
 •⁠  ⁠*🤖 AI Mental Health Assistant* – Chatbot AI yang memberikan saran berbasis kecerdasan buatan untuk kesehatan mental serta merangkum hasil konsultasi dengan psikolog.
+
 •⁠  ⁠*🔒 Keamanan & Privasi Terjamin* – Data pengguna dilindungi dengan teknologi blockchain dan enkripsi berbasis ICP, memastikan informasi tetap aman.
+
 •⁠  ⁠*💰 Pembayaran dengan ICP Token* – Sistem pembayaran menggunakan token ICP untuk transaksi yang cepat, efisien, dan transparan.
+
 •⁠  ⁠*💬 Komunitas Pendukung* – Forum interaktif bagi pengguna untuk berbagi pengalaman, saling mendukung, dan berdiskusi dalam lingkungan yang anonim.
 
 
