@@ -1,3 +1,5 @@
+import Text "mo:base/Text";
+import HashMap "mo:base/HashMap";
 import Principal "mo:base/Principal";
 import HashMap "mo:base/HashMap";
 import Iter "mo:base/Iter";
