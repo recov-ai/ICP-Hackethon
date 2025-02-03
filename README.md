@@ -1,15 +1,16 @@
-# 🧠 **Metalog - Decentralized Mental Health Platform**
+# 🧠 Metalog - Platform Kesehatan Mental Berbasis Blockchain
 
-Metalog adalah **platform kesehatan mental berbasis teknologi blockchain** menggunakan **Internet Computer Protocol (ICP)**. Aplikasi ini memberikan akses **aman, anonim, dan desentralisasi** untuk konsultasi psikolog, AI Assistant, serta komunitas kesehatan mental.
+Metalog adalah platform kesehatan mental yang mengutamakan keamanan dan anonimitas dengan teknologi blockchain, dibangun menggunakan Internet Computer Protocol (ICP). Aplikasi ini menyediakan layanan konsultasi psikolog, asisten AI, serta komunitas kesehatan mental dalam ekosistem yang terdesentralisasi, memastikan pengalaman yang aman dan terpercaya bagi pengguna.
 
 ---
 
-## 🚀 **Fitur Utama**
-- **🩺 Konsultasi dengan Psikolog** – Sesi privat dengan psikolog profesional.
-- **🤖 AI Mental Health Assistant** – Chatbot AI untuk saran dan tips kesehatan mental.
-- **🔒 Keamanan & Privasi** – Data pengguna aman dengan teknologi **ICP**.
-- **💰 Pembayaran ICP Token** – Transaksi langsung menggunakan **ICP**.
-- **💬 Komunitas & Support** – Forum diskusi dan berbagi pengalaman antar pengguna.
+## 🚀 Fitur Utama
+•⁠  ⁠*🩺 Konsultasi Profesional* – Sesi privat dengan psikolog bersertifikat, memberikan kenyamanan dan anonimitas bagi pengguna.
+•⁠  ⁠*🤖 AI Mental Health Assistant* – Chatbot AI yang memberikan saran berbasis kecerdasan buatan untuk kesehatan mental serta merangkum hasil konsultasi dengan psikolog.
+•⁠  ⁠*🔒 Keamanan & Privasi Terjamin* – Data pengguna dilindungi dengan teknologi blockchain dan enkripsi berbasis ICP, memastikan informasi tetap aman.
+•⁠  ⁠*💰 Pembayaran dengan ICP Token* – Sistem pembayaran menggunakan token ICP untuk transaksi yang cepat, efisien, dan transparan.
+•⁠  ⁠*💬 Komunitas Pendukung* – Forum interaktif bagi pengguna untuk berbagi pengalaman, saling mendukung, dan berdiskusi dalam lingkungan yang anonim.
+
 
 ---
 
