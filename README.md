@@ -115,7 +115,7 @@ Metalog uses Internet Computer Protocol (ICP) to support application security, p
 ---
 
 ## **🛠 Technology Stack**
-Metalog dibangun dengan menggunakan teknologi Web3 dan ICP untuk menciptakan aplikasi yang cepat, aman, dan efisien.
+Metalog was built using Web3 and ICP technology to create fast, secure and efficient applications.
 
 **Backend & Blockchain:**
 
