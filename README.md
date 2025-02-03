@@ -9,14 +9,13 @@
 ## 🚀 **Key Features**  
 - **🩺 Professional Consultation** – Private sessions with certified psychologists, ensuring user comfort and anonymity.  
 
-- **🤖 AI Mental Health Assistant** – AI-powered chatbot providing mental health recommendations and summarizing psychologist consultations.  
+- **🤖 AI Mental Health Assistant** – AI-powered chatbot providing mental health recommendations and analyze psychologist consultations.  
 
 - **🔒 Security & Privacy** – User data is secured using **blockchain technology** and **ICP-based encryption**, ensuring confidentiality.  
 
 - **💰 ICP Token Payments** – Seamless transactions using **ICP tokens**, providing fast, efficient, and transparent payments.  
 
 - **💬 Supportive Community** – An interactive forum for users to share experiences, provide support, and discuss mental health in an **anonymous** environment.  
-
 
 ---
 
@@ -33,7 +32,9 @@ dfx --version
 
 # Clone repository & install dependencies
 git clone https://github.com/your-repo/metalog.git
+
 cd metalog
+
 npm install
 ```
 
