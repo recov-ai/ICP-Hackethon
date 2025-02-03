@@ -1,31 +1,38 @@
-# 🧠 Metalog - Platform Kesehatan Mental Berbasis Blockchain
+# 🧠 **Metalog - Blockchain-Based Mental Health Platform**  
 
-Metalog adalah platform kesehatan mental yang mengutamakan keamanan dan anonimitas dengan teknologi blockchain, dibangun menggunakan Internet Computer Protocol (ICP). Aplikasi ini menyediakan layanan konsultasi psikolog, asisten AI, serta komunitas kesehatan mental dalam ekosistem yang terdesentralisasi, memastikan pengalaman yang aman dan terpercaya bagi pengguna.
+![Metalog Banner](./public/images/banner.png) 
 
----
-
-## 🚀 Fitur Utama
-•⁠  ⁠*🩺 Konsultasi Profesional* – Sesi privat dengan psikolog bersertifikat, memberikan kenyamanan dan anonimitas bagi pengguna.
-•⁠  ⁠*🤖 AI Mental Health Assistant* – Chatbot AI yang memberikan saran berbasis kecerdasan buatan untuk kesehatan mental serta merangkum hasil konsultasi dengan psikolog.
-•⁠  ⁠*🔒 Keamanan & Privasi Terjamin* – Data pengguna dilindungi dengan teknologi blockchain dan enkripsi berbasis ICP, memastikan informasi tetap aman.
-•⁠  ⁠*💰 Pembayaran dengan ICP Token* – Sistem pembayaran menggunakan token ICP untuk transaksi yang cepat, efisien, dan transparan.
-•⁠  ⁠*💬 Komunitas Pendukung* – Forum interaktif bagi pengguna untuk berbagi pengalaman, saling mendukung, dan berdiskusi dalam lingkungan yang anonim.
+**Metalog** is a decentralized mental health platform that prioritizes **security and anonymity** using **Internet Computer Protocol (ICP)**. This application provides professional psychologist consultations, an AI assistant, and a mental health community within a **secure and trusted ecosystem**.  
 
 
 ---
 
-## 🔧 **Instalasi & Deployment**
-Aplikasi ini menggunakan **dfx (Dfinity SDK), Node.js, dan Vite**.
+## 🚀 **Key Features**  
+- **🩺 Professional Consultation** – Private sessions with certified psychologists, ensuring user comfort and anonymity.  
 
-### **1️⃣ Install Dependencies**
+- **🤖 AI Mental Health Assistant** – AI-powered chatbot providing mental health recommendations and summarizing psychologist consultations.  
+
+- **🔒 Security & Privacy** – User data is secured using **blockchain technology** and **ICP-based encryption**, ensuring confidentiality.  
+
+- **💰 ICP Token Payments** – Seamless transactions using **ICP tokens**, providing fast, efficient, and transparent payments.  
+
+- **💬 Supportive Community** – An interactive forum for users to share experiences, provide support, and discuss mental health in an **anonymous** environment.  
+
+
+---
+
+## 🔧 **Installation & Deployment**  
+Metalog uses **dfx (Dfinity SDK), Node.js, and Vite** for deployment.  
+
+### **1️⃣ Install Dependencies**  
 ```sh
 # Install Dfinity SDK (dfx)
 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 
-# Cek versi dfx
+# Check dfx version
 dfx --version
 
-# Clone repo & install dependencies
+# Clone repository & install dependencies
 git clone https://github.com/your-repo/metalog.git
 cd metalog
 npm install
@@ -33,33 +40,34 @@ npm install
 
 ---
 
-### **2️⃣ Konfigurasi Environment**
-Pastikan file .env sudah dikonfigurasi di metalog_frontend/.env:
+### **2️⃣ Configure Environment Variables**
+Ensure the .env file is set up in metalog_frontend/.env:
 ```sh
 VITE_BACKEND_CANISTER_ID=<CANISTER_ID_METALOG_BACKEND>
 VITE_FRONTEND_CANISTER_ID=<CANISTER_ID_METALOG_FRONTEND>
 VITE_AUTH_PROVIDER=https://identity.ic0.app
 ```
-🔹 Ganti **<CANISTER_ID_METALOG_BACKEND>** dan **<CANISTER_ID_METALOG_FRONTEND>** dengan canister ID setelah dfx deploy.
+🔹  Replace **<CANISTER_ID_METALOG_BACKEND>** and **<CANISTER_ID_METALOG_FRONTEND>** with the actual canister IDs after running dfx deploy.
 
 ---
 
-### **3️⃣ Jalankan di Jaringan Lokal**
+### **3️⃣ Run on Local Network**
 ```sh
-# Jalankan ICP di lokal
+# Start ICP locally
 dfx start --background
 
-# Hapus build lama
+# Remove old build files
 rm -rf .dfx node_modules .vite
 
-# Deploy backend & frontend ke lokal
+# Deploy backend & frontend locally
 dfx deploy --network local
 
-# Jalankan frontend di mode development
+# Run the frontend in development mode
 npm run dev
+
 ```
 
-🔗 Akses aplikasi:
+🔗 Access the application:
 - 👉 Frontend: http://localhost:5173/?canisterId=<CANISTER_ID_METALOG_FRONTEND>
 - 👉 Backend Candid UI: http://127.0.0.1:4943/?canisterId=<CANISTER_ID_METALOG_BACKEND>
 
@@ -72,81 +80,90 @@ dfx deploy --network ic
 
 ---
 
-## **💡 Integrasi ICP di Metalog**
+## **💡 ICP Integration in Metalog**
 
-Metalog menggunakan Internet Computer Protocol (ICP) untuk mendukung keamanan, privasi, dan skalabilitas aplikasi. Berikut adalah beberapa aspek utama integrasi ICP di Metalog:
+Metalog uses Internet Computer Protocol (ICP) to support application security, privacy, and scalability. Here are some key aspects of ICP integration in Metalog:
 
 **✅ 1. Identity & Authentication**
 
-Pengguna dapat login menggunakan Internet Identity (II) dari identity.ic0.app.
-Principal ID digunakan sebagai identitas unik setiap pengguna, memastikan keamanan & desentralisasi tanpa ketergantungan pada email atau kata sandi.
+- Users log in via Internet Identity (II) at identity.ic0.app.
 
-**✅ 2. Smart Contract (Canister) untuk Backend**
+- Each user is assigned a Principal ID, ensuring decentralized and secure authentication without email or passwords.
 
-Metalog_backend berfungsi sebagai smart contract (canister) di blockchain ICP.
-Semua data pengguna, transaksi, dan logika bisnis disimpan di dalam canister backend.
-Tidak ada server terpusat, semua data dikelola langsung dalam blockchain ICP, memastikan keamanan data yang lebih baik.
+**✅ 2. Smart Contract (Canister) for Backend**
 
-**✅ 3. Keamanan & Desentralisasi**
+- metalog_backend acts as a smart contract (canister) on the ICP blockchain.
 
-Tidak ada server terpusat → seluruh data pengguna disimpan dalam decentralized canisters.
-Privasi lebih terjaga → hanya pengguna yang memiliki akses penuh ke data mereka sendiri.
-Tidak ada perusahaan pihak ketiga yang dapat mengakses atau mengontrol data pengguna.
-Dukungan ICP Stable Memory untuk memastikan data tetap persisten dan aman.
+- Stores all user data, transactions, and logic in the backend canister.
 
-**✅ 4. Pembayaran dengan ICP Token**
+- No centralized servers, all data is managed within ICP's blockchain ecosystem.
 
-Pembayaran sesi konsultasi dilakukan dengan ICP Token yang terintegrasi langsung dalam Metalog.
-ICP Wallet dapat digunakan untuk transaksi yang lebih mudah dan cepat.
-Tidak memerlukan kartu kredit, semua transaksi dilakukan melalui blockchain ICP, memastikan transparansi dan kecepatan pembayaran.
+**✅ 3. Security & Decentralization**
+
+- No centralized database → User data is stored in decentralized canisters.
+
+- Enhanced privacy → Only users have full control over their data.
+
+- No third-party access → No company can access or control user data.
+
+- Uses ICP Stable Memory to ensure persistent and secure data storage.
+
+**✅ 4. ICP Token Payments**
+
+- Consultation sessions are paid using ICP Tokens, directly integrated into Metalog.
+
+- ICP Wallets are supported for seamless transactions.
+
+- No credit cards required, transactions are executed via ICP’s blockchain, ensuring transparency and speed.
 
 ---
 
-## **🛠 Teknologi yang Digunakan**
+## **🛠 Technology Stack**
 Metalog dibangun dengan menggunakan teknologi Web3 dan ICP untuk menciptakan aplikasi yang cepat, aman, dan efisien.
 
 **Backend & Blockchain:**
 
-- Motoko → Bahasa pemrograman untuk smart contract di ICP.
+- Motoko → Smart contract programming language for ICP.
 
-- ICP Canister → Digunakan sebagai backend desentralisasi.
+- ICP Canister → Used for decentralized backend services.
 
-- DFX SDK → Untuk pengelolaan dan deployment canister.
+- DFX SDK → Canister management and deployment tool.
 
-- Candid UI → Untuk pengujian fungsi canister backend.
+- Candid UI → Used for backend canister testing.
 
 **Frontend & UI:**
 
-- React.js + Vite → Untuk membangun antarmuka yang cepat dan responsif.
+- React.js + Vite → Fast and optimized frontend development.
 
-- TailwindCSS / SCSS → Framework styling untuk tampilan modern.
+- TailwindCSS / SCSS → Styling framework for modern UI.
 
-- React Router → Untuk navigasi antar halaman.
+- React Router → Navigation system for seamless page transitions.
 
-- SweetAlert2 → Untuk menampilkan alert dalam aplikasi.
+- SweetAlert2 → User-friendly alert dialogs.
 
 **Autentikasi & Keamanan:**
-- Internet Identity (II) → Untuk login aman menggunakan Web3 Identity.
 
-- @dfinity/auth-client → Library untuk autentikasi pengguna.
+- Internet Identity (II) → Secure authentication using Web3 identity.
 
-- ICP Principal ID → Digunakan sebagai identitas unik pengguna.
+- @dfinity/auth-client → Authentication library for ICP.
+
+- ICP Principal ID → Unique decentralized user identity.
 
 **Penyimpanan & Database:**
 
-- Stable Memory (ICP) → Untuk menyimpan data di blockchain ICP.
+- Stable Memory (ICP) → Stores data persistently on the ICP blockchain.
 
-- ICP Web3 Storage → Penyimpanan file dan transaksi di blockchain.
+- ICP Web3 Storage → Blockchain-based file storage and transactions.
 
 **Pembayaran & Wallet Web3:**
 
-- ICP Tokens → Digunakan untuk transaksi dalam platform Metalog.
+- ICP Tokens → Used for in-app transactions.
 
-- Plug Wallet → Wallet Web3 yang kompatibel dengan ICP.
+- Plug Wallet → Web3 wallet compatible with ICP.
 
 ---
 
-## 📂 **Struktur Folder**
+## 📂 **Project Structure**
 ```bash
 metalog/
 │── src/
@@ -165,8 +182,8 @@ metalog/
 │── .dfx/                   # DFX build cache
 │── package.json
 │── dfx.json                # ICP Canister Configuration
-│── vite.config.js          # V
-
+│── vite.config.js          # Vite Configuration
+│── README.md
 ```
 
 ## 📜 **Lisensi - MIT License**
