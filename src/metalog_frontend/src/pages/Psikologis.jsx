@@ -3,8 +3,11 @@ import PostCard from "../components/Dashboard/PostCard";
 import Slider from "react-slick"; 
 import { RiGraduationCapFill, RiSchoolFill, RiBookOpenFill, RiTimeFill } from "react-icons/ri";
 import '../scss/Dashboard/Psikologis.scss';
+import { getFrontendCanisterId } from "../utils/canister"; 
 
 const Psikologis = () => {
+  const frontendCanisterId = getFrontendCanisterId(); 
+  
   const carouselImages = [
     "/images/adv1.png",
     "/images/adv2.png",
@@ -38,7 +41,14 @@ const Psikologis = () => {
                 <h2>Zahra Adinda Yaskur, M.Psi.</h2>
                 <p>Lecturer in Psychology at Gunadarma University</p>
               </div>
-            <button>Edit Profile</button>
+              {import.meta.env.VITE_ROLE === 'user' ? (
+                <div className="chat-psikolog">
+                  <a href="">Book Later</a>
+                  <a className="book-btn" href={`/payment?canisterId=${frontendCanisterId}`}>Book Now</a>
+                </div>
+              ) : (
+                <a className="edit-profile" href={`/edit-profile?canisterId=${frontendCanisterId}`}>Edit Profile</a>
+              )}
             </div>
           </div>
           <div className="information-psychologist">

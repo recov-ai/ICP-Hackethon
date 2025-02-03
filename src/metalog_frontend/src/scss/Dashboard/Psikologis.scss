@@ -26,7 +26,34 @@
         padding-top: 20px;
         padding: 60px 25px 25px 25px;
 
-        button {
+        .chat-psikolog {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+
+        
+            a{
+                text-decoration: none;
+                color: #595BD4;
+            }
+            .book-btn {
+                padding: 12px 16px;
+                border: none;
+                background-color: #6c63ff;
+                color: white;
+                border-radius: 10px;
+        
+                &:hover {
+                    background-color: #595BD4;
+                    cursor: pointer;
+                    transition: .8s;
+                }
+            }
+        }
+
+        .edit-profile {
             position: absolute;
             right: 25px;
             top: 61%;

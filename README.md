@@ -1,59 +1,174 @@
-# `metalog`
+# 🧠 **Metalog - Decentralized Mental Health Platform**
 
-Welcome to your new `metalog` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Metalog adalah **platform kesehatan mental berbasis teknologi blockchain** menggunakan **Internet Computer Protocol (ICP)**. Aplikasi ini memberikan akses **aman, anonim, dan desentralisasi** untuk konsultasi psikolog, AI Assistant, serta komunitas kesehatan mental.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+---
 
-To learn more before you start working with `metalog`, see the following documentation available online:
+## 🚀 **Fitur Utama**
+- **🩺 Konsultasi dengan Psikolog** – Sesi privat dengan psikolog profesional.
+- **🤖 AI Mental Health Assistant** – Chatbot AI untuk saran dan tips kesehatan mental.
+- **🔒 Keamanan & Privasi** – Data pengguna aman dengan teknologi **ICP**.
+- **💰 Pembayaran ICP Token** – Transaksi langsung menggunakan **ICP**.
+- **💬 Komunitas & Support** – Forum diskusi dan berbagi pengalaman antar pengguna.
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+---
 
-If you want to start working on your project right away, you might want to try the following commands:
+## 🔧 **Instalasi & Deployment**
+Aplikasi ini menggunakan **dfx (Dfinity SDK), Node.js, dan Vite**.
 
-```bash
-cd metalog/
-dfx help
-dfx canister --help
+### **1️⃣ Install Dependencies**
+```sh
+# Install Dfinity SDK (dfx)
+sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+
+# Cek versi dfx
+dfx --version
+
+# Clone repo & install dependencies
+git clone https://github.com/your-repo/metalog.git
+cd metalog
+npm install
 ```
 
-## Running the project locally
+---
 
-If you want to test your project locally, you can use the following commands:
+### **2️⃣ Konfigurasi Environment**
+Pastikan file .env sudah dikonfigurasi di metalog_frontend/.env:
+```sh
+VITE_BACKEND_CANISTER_ID=<CANISTER_ID_METALOG_BACKEND>
+VITE_FRONTEND_CANISTER_ID=<CANISTER_ID_METALOG_FRONTEND>
+VITE_AUTH_PROVIDER=https://identity.ic0.app
+```
+🔹 Ganti **<CANISTER_ID_METALOG_BACKEND>** dan **<CANISTER_ID_METALOG_FRONTEND>** dengan canister ID setelah dfx deploy.
 
-```bash
-# Starts the replica, running in the background
+---
+
+### **3️⃣ Jalankan di Jaringan Lokal**
+```sh
+# Jalankan ICP di lokal
 dfx start --background
 
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
+# Hapus build lama
+rm -rf .dfx node_modules .vite
+
+# Deploy backend & frontend ke lokal
+dfx deploy --network local
+
+# Jalankan frontend di mode development
+npm run dev
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+🔗 Akses aplikasi:
+- 👉 Frontend: http://localhost:5173/?canisterId=<CANISTER_ID_METALOG_FRONTEND>
+- 👉 Backend Candid UI: http://127.0.0.1:4943/?canisterId=<CANISTER_ID_METALOG_BACKEND>
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+### **4️⃣ Deploy ke Mainnet ICP**
+Untuk deploy ke jaringan utama ICP:
+```sh
+dfx deploy --network ic
+```
+🔹 Setelah selesai, gunakan canister ID baru untuk .env sebelum menjalankan ulang aplikasi.
 
+---
+
+## **💡 Integrasi ICP di Metalog**
+
+Metalog menggunakan Internet Computer Protocol (ICP) untuk mendukung keamanan, privasi, dan skalabilitas aplikasi. Berikut adalah beberapa aspek utama integrasi ICP di Metalog:
+
+**✅ 1. Identity & Authentication**
+
+Pengguna dapat login menggunakan Internet Identity (II) dari identity.ic0.app.
+Principal ID digunakan sebagai identitas unik setiap pengguna, memastikan keamanan & desentralisasi tanpa ketergantungan pada email atau kata sandi.
+
+**✅ 2. Smart Contract (Canister) untuk Backend**
+
+Metalog_backend berfungsi sebagai smart contract (canister) di blockchain ICP.
+Semua data pengguna, transaksi, dan logika bisnis disimpan di dalam canister backend.
+Tidak ada server terpusat, semua data dikelola langsung dalam blockchain ICP, memastikan keamanan data yang lebih baik.
+
+**✅ 3. Keamanan & Desentralisasi**
+
+Tidak ada server terpusat → seluruh data pengguna disimpan dalam decentralized canisters.
+Privasi lebih terjaga → hanya pengguna yang memiliki akses penuh ke data mereka sendiri.
+Tidak ada perusahaan pihak ketiga yang dapat mengakses atau mengontrol data pengguna.
+Dukungan ICP Stable Memory untuk memastikan data tetap persisten dan aman.
+
+**✅ 4. Pembayaran dengan ICP Token**
+
+Pembayaran sesi konsultasi dilakukan dengan ICP Token yang terintegrasi langsung dalam Metalog.
+ICP Wallet dapat digunakan untuk transaksi yang lebih mudah dan cepat.
+Tidak memerlukan kartu kredit, semua transaksi dilakukan melalui blockchain ICP, memastikan transparansi dan kecepatan pembayaran.
+
+---
+
+## **🛠 Teknologi yang Digunakan**
+Metalog dibangun dengan menggunakan teknologi Web3 dan ICP untuk menciptakan aplikasi yang cepat, aman, dan efisien.
+
+**Backend & Blockchain:**
+
+- Motoko → Bahasa pemrograman untuk smart contract di ICP.
+
+- ICP Canister → Digunakan sebagai backend desentralisasi.
+
+- DFX SDK → Untuk pengelolaan dan deployment canister.
+
+- Candid UI → Untuk pengujian fungsi canister backend.
+
+**Frontend & UI:**
+
+- React.js + Vite → Untuk membangun antarmuka yang cepat dan responsif.
+
+- TailwindCSS / SCSS → Framework styling untuk tampilan modern.
+
+- React Router → Untuk navigasi antar halaman.
+
+- SweetAlert2 → Untuk menampilkan alert dalam aplikasi.
+
+**Autentikasi & Keamanan:**
+- Internet Identity (II) → Untuk login aman menggunakan Web3 Identity.
+
+- @dfinity/auth-client → Library untuk autentikasi pengguna.
+
+- ICP Principal ID → Digunakan sebagai identitas unik pengguna.
+
+**Penyimpanan & Database:**
+
+- Stable Memory (ICP) → Untuk menyimpan data di blockchain ICP.
+
+- ICP Web3 Storage → Penyimpanan file dan transaksi di blockchain.
+
+**Pembayaran & Wallet Web3:**
+
+- ICP Tokens → Digunakan untuk transaksi dalam platform Metalog.
+
+- Plug Wallet → Wallet Web3 yang kompatibel dengan ICP.
+
+---
+
+## 📂 **Struktur Folder**
 ```bash
-npm run generate
+metalog/
+│── src/
+│   ├── metalog_backend/    # Smart contract (Motoko)
+│   ├── metalog_frontend/   # Frontend (React + Vite)
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── utils/
+│   │   │   ├── context/
+│   │   │   ├── scss/
+│   │   │   ├── App.jsx
+│   │   │   ├── main.jsx
+│   │   ├── .env
+│   ├── declarations/       # Auto-generated canister bindings
+│── .dfx/                   # DFX build cache
+│── package.json
+│── dfx.json                # ICP Canister Configuration
+│── vite.config.js          # V
+
 ```
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+## 📜 **Lisensi - MIT License**
+MIT License
 
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+Copyright (c) 2025 Metalog

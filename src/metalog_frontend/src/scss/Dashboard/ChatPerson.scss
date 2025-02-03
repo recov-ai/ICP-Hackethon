@@ -1,0 +1,199 @@
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    padding: 2rem;
+}
+
+/* Chat Window */
+.chat-person-window {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+
+    .header-start {
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        background: #6c63ff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.icon-time {
+    width: 20px;
+    margin: 0;
+}
+
+.chat-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info-chat-user {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.chat-title-person {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.chat-time-person {
+    margin-top: 5px;
+    font-size: .7rem;
+    color: #333;
+}
+
+/* Chat Content */
+.chat-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Tampilan Awal */
+.chat-start {
+    text-align: center;
+}
+
+.chat-start-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    max-width: 60%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.user {
+    background: #6c63ff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.receiver {
+    background: #f3f6fb;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Chat Time */
+.chat-time {
+    font-size: 0.75rem;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    background: white;
+    position: sticky;
+    bottom: 0;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Input di Tengah (Tampilan Awal) */
+.chat-input-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    background: #f3f6fb;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.chat-input-center input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.chat-input-center button {
+    background: transparent;
+    color: #6c63ff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}

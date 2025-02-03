@@ -23,7 +23,7 @@ const Dashboard = () => {
     autoplaySpeed: 3000,
     arrows: false,
   };
-
+  
   return (
     <DashboardLayout>
       <div className="dashboard-container">
@@ -69,13 +69,14 @@ const Dashboard = () => {
               ))}
             </Slider>
           </div>
-
-          <div className="recommendation">
-            <h3>Recommendation Psychologist</h3>
-            <PsychologistCard name="Amira Farouq" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog1.png" />
-            <PsychologistCard name="Petros Mambwe" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog2.png" />
-            <PsychologistCard name="Varun Choudhary" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog3.png" />
-          </div>
+          {import.meta.env.VITE_ROLE == "user" ? (
+            <div className="recommendation">
+              <h3>Recommendation Psychologist</h3>
+              <PsychologistCard name="Amira Farouq" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog1.png" />
+              <PsychologistCard name="Petros Mambwe" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog2.png" />
+              <PsychologistCard name="Varun Choudhary" experience="10 Years" price="1.2 ICP" rating="4.5" profile="/images/psikolog3.png" />
+            </div>
+          ): ""}
         </div>
       </div>
     </DashboardLayout>

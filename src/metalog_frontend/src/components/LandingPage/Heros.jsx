@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IconLoader from "../../utils/IconLoader";
 import Auth from "../Auth";
+import { getFrontendCanisterId } from "../../utils/canister"; 
 import "../../scss/LandingPage/Heros.scss";
+import { NavLink } from "react-router-dom";
 
 const Heros = () => {
-  const [userIdentity, setUserIdentity] = useState(null);
+  const [userIdentity, setUserIdentity] = useState(localStorage.getItem("user") || null);
+  const frontendCanisterId = getFrontendCanisterId();
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setUserIdentity(localStorage.getItem("user"));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   return (
     <section className="hero">
@@ -17,7 +29,9 @@ const Heros = () => {
 
         <div>
           {userIdentity ? (
-            <p>Welcome, {userIdentity}!</p>
+            <NavLink to={`/dashboard?canisterId=${frontendCanisterId}`}>
+              <button>Go To Dashboard</button>
+            </NavLink>
           ) : (
             <Auth onAuthenticated={setUserIdentity} />
           )}

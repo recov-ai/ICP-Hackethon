@@ -1,9 +1,14 @@
 import DashboardLayout from "../layouts/DashboardLayout";
 import Slider from "react-slick";
-import { RiStarFill, RiChat3Fill, RiWallet3Fill, RiShieldStarFill, RiArrowLeftLine, RiBookmarkFill, RiHandbagFill } from "react-icons/ri";
+import { RiStarFill, RiChat3Fill, RiArrowLeftLine, RiBookmarkFill, RiHandbagFill } from "react-icons/ri";
 import '../scss/Dashboard/Consultation.scss';
+import { useNavigate } from "react-router-dom";
+import { getFrontendCanisterId } from "../utils/canister"; 
 
 const Consultation = () => {
+  const navigate = useNavigate();
+  const frontendCanisterId = getFrontendCanisterId(); 
+
   const carouselImages = [
     "/images/adv1.png",
     "/images/adv2.png",
@@ -60,9 +65,9 @@ const Consultation = () => {
                       <img src="/images/ICP Logo.png" className="consultant-icp" /> {consultant.price}
                   </p>
                   <div>
-                      <button className="chat-button">
+                      <a href={`/psychologist?canisterId=${frontendCanisterId}`} className="chat-button">
                           <RiChat3Fill className="icon-chat" /> Chat
-                      </button>
+                      </a>
                   </div>
                 </div>
               </div>
@@ -95,9 +100,9 @@ const Consultation = () => {
                       <img src="/images/ICP Logo.png" className="consultant-icp" /> {consultant.price}
                   </p>
                   <div>
-                      <button className="chat-button">
+                      <a href={`/psychologist?canisterId=${frontendCanisterId}`} className="chat-button">
                           <RiChat3Fill /> Chat
-                      </button>
+                      </a>
                   </div>
                 </div>
               </div>

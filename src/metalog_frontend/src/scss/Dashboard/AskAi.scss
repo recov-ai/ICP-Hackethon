@@ -1,0 +1,215 @@
+.ask-ai-container {
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+    height: 90vh; /* Pastikan kontainer mengambil seluruh tinggi layar */
+    padding: 2rem;
+}
+
+
+/* Chat Window */
+.chat-window {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Tampilan Awal (Sebelum Chat) */
+.chat-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.chat-start img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.chat-start-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Header Chat AI */
+.chat-header-ai {
+    display: flex;
+    align-items: center; /* Pastikan ikon dan teks berada di tengah vertikal */
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+/* Perbaikan Ikon AI */
+.chat-header-ai img {
+    width: 30px;
+    flex-shrink: 0; /* Pastikan ikon tidak menyusut */
+    margin-right: 10px;
+}
+
+/* Perbaikan Teks "AI Assist" */
+.chat-header-ai p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0; /* Hapus margin default */
+}
+
+
+/* Input Chat di Tengah */
+.chat-input-center-ai {
+    display: flex;
+    margin-top: 20px;
+    width: 90%;
+    background: #f3f6fb;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.chat-input-center-ai input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0px 12px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.chat-input-center-ai button {
+    background: transparent;
+    color: #6c63ff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-bubble {
+    max-width: 75%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.user {
+    background: #6c63ff;
+    color: #ffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+.user p, .user span {
+    color: #ffff;
+}
+
+.ai {
+    background: #f3f6fb;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Chat Time */
+.chat-time {
+    font-size: 0.75rem;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Chat Input di Bawah */
+.chat-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat History */
+.chat-history {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem; /* Tambahkan lebih banyak padding */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Biar bisa di-scroll jika kontennya panjang */
+
+}
+
+/* Logo dalam Chat History */
+.chat-history img {
+    width: 180px; /* Pastikan ukurannya proporsional */
+    display: block;
+    // margin: 0 15px; /* Tengahkan gambar */
+    margin-bottom: 50px;
+}
+
+/* Judul dalam Chat History */
+.chat-history h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+/* Teks dalam Chat History */
+.chat-history p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 25px;
+    text-overflow: ellipsis; /* Biar teks yang panjang dipotong */
+    white-space: nowrap;
+    overflow: hidden;
+}
+.chat-active {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

@@ -1,16 +1,15 @@
 import DashboardLayout from "../layouts/DashboardLayout";
-import { RiChat3Fill, RiFileList2Line, RiHistoryFill } from "react-icons/ri";
-import "../scss/Dashboard/Transaction.scss";
+import { RiChat3Fill, RiLoginCircleFill, RiTodoFill } from "react-icons/ri";
 import { getFrontendCanisterId } from "../utils/canister"; 
+import "../scss/Dashboard/Transaction.scss";
 
-const Transaction = () => {
+const Order = () => {
   const frontendCanisterId = getFrontendCanisterId(); 
-
   return (
     <DashboardLayout>
       <div className="transaction-container">
         <div className="transaction-section">
-          <h3 className="section-title"><RiFileList2Line className="section-icon order"/> Your Order</h3>
+          <h3 className="section-title"><RiLoginCircleFill className="section-icon order"/> Orders Received</h3>
           <div className="transaction-table">
             <table>
               <thead>
@@ -56,7 +55,7 @@ const Transaction = () => {
         </div>
 
         <div className="transaction-section">
-          <h3 className="section-title"><RiHistoryFill className="section-icon history" /> History</h3>
+          <h3 className="section-title"><RiTodoFill className="section-icon history" /> Order Confirmed</h3>
           <div className="transaction-table">
             <table>
               <thead>
@@ -79,8 +78,8 @@ const Transaction = () => {
                     <td>0.7137662963551952 ICP <br /> <span className="price-idr">Rp 100.000</span></td>
                     <td>
                       <div className="action-btn">
-                        <a href={`/summary?canisterId=${frontendCanisterId}`} className="summary-btn">View Summary</a>
-                        <a href={`/chat?canisterId=${frontendCanisterId}`} className="chat-btn"><RiChat3Fill /> Chat</a>
+                      <a href={`/summary?canisterId=${frontendCanisterId}`} className="summary-btn">View Summary</a>
+                      <a href={`/chat?canisterId=${frontendCanisterId}`} className="chat-btn"><RiChat3Fill /> Chat</a>
                       </div>
                     </td>
                   </tr>
@@ -95,4 +94,4 @@ const Transaction = () => {
   );
 };
 
-export default Transaction;
+export default Order;

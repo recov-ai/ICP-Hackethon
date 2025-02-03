@@ -1,9 +1,36 @@
 import DashboardLayout from "../layouts/DashboardLayout";
+import { useNavigate } from "react-router-dom"; 
 import { RiCalendarFill, RiCheckboxCircleFill } from "react-icons/ri";
 import "../scss/Dashboard/Payment.scss";
 import { FaLock, FaStar } from "react-icons/fa";
+import { getFrontendCanisterId } from "../utils/canister"; 
+import Swal from "sweetalert2"; 
 
 const Payment = () => {
+  const navigate = useNavigate(); 
+  const frontendCanisterId = getFrontendCanisterId(); 
+
+  const handleCheckout = () => {
+    Swal.fire({
+      title: "Processing Payment...",
+      text: "Please wait while we process your payment.",
+      icon: "info",
+      showConfirmButton: false,
+      timer: 2000, 
+      willClose: () => {
+        Swal.fire({
+          title: "Payment Successful!",
+          text: "Your payment has been processed successfully.",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#6c63ff",
+        }).then(() => {
+          navigate(`/dashboard?canisterId=${frontendCanisterId}`); 
+        });
+      },
+    });
+  };
+
   return (
     <DashboardLayout>
       <div className="container-payment">
@@ -51,7 +78,7 @@ const Payment = () => {
               <hr />
               <p className="total-payment">Total Harga <span>1.32 ICP</span></p>
             </div>
-            <button className="btn-checkout">Checkout Now</button>
+            <button className="btn-checkout" onClick={handleCheckout}>Checkout Now</button>
           </div>
         </div>
       </div>

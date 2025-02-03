@@ -32,14 +32,27 @@ ChartJS.register(
 const Report = () => {
   const [timeRange, setTimeRange] = useState("7 Days");
 
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth(); // 0 = Jan, 11 = Dec
+  const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate(); // Dapatkan jumlah hari dalam bulan ini
+
+  const getMonthlyLabels = () => {
+    let ranges = ["1-6", "7-12", "13-18", "19-24"];
+    if (lastDay > 24) {
+      ranges.push(`25-${lastDay}`);
+    }
+    return ranges;
+  };
+
   const chartData = {
     "7 Days": {
       labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       data: [5.6, 6.4, 7.6, 7.8, 7.0, 3.7, 3.7]
     },
     "1 Month": {
-      labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-      data: [20, 25, 18, 22]
+      labels: getMonthlyLabels(), // Rentang tanggal berdasarkan bulan saat ini
+      data: getMonthlyLabels().map(() => Math.floor(Math.random() * 100)) // Dummy data
     },
     "1 Year": {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],

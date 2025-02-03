@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { RiWalletFill, RiHome6Line, RiChatAiLine, RiChatSmile3Line, RiExchangeDollarLine } from 'react-icons/ri';
+import { RiWalletFill, RiHome6Line, RiChatAiLine, RiChatSmile3Line, RiExchangeDollarLine, RiFileList2Line, RiFileChartLine } from 'react-icons/ri';
 import { IoCopy } from "react-icons/io5";
 import '../../scss/Dashboard/Sidebar.scss';
+import { getFrontendCanisterId } from "../../utils/canister"; // Import fungsi untuk mendapatkan canisterId frontend
 
 const Sidebar = () => {
   const location = useLocation();
+  const frontendCanisterId = getFrontendCanisterId(); 
 
   return (
     <aside className="sidebar">
@@ -38,32 +40,61 @@ const Sidebar = () => {
 
       <nav className="sidebar-menu">
         <h4>Menu</h4>
-        <ul>
-          <li className={location.pathname === '/dashboard' ? 'active' : ''}>
-            <NavLink to="/dashboard" className="menu-item">
-              <RiHome6Line className="icon" />
-              <span>Home</span>
-            </NavLink>
-          </li>
-          <li className={location.pathname === '/ask-ai' ? 'active' : ''}>
-            <NavLink to="/ask-ai" className="menu-item">
-              <RiChatAiLine className="icon" />
-              <span>Ask AI</span>
-            </NavLink>
-          </li>
-          <li className={location.pathname === '/consultation' ? 'active' : ''}>
-            <NavLink to="/consultation" className="menu-item">
-              <RiChatSmile3Line className="icon" />
-              <span>Consultation</span>
-            </NavLink>
-          </li>
-          <li className={location.pathname === '/transaction' ? 'active' : ''}>
-            <NavLink to="/transaction" className="menu-item">
-              <RiExchangeDollarLine className="icon" />
-              <span>Transaction</span>
-            </NavLink>
-          </li>
-        </ul>
+        {import.meta.env.VITE_ROLE === "user" ? (
+          <ul>
+            <li className={location.pathname === '/dashboard' ? 'active' : ''}>
+              <NavLink to={`/dashboard?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiHome6Line className="icon" />
+                <span>Home</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/ask-ai' ? 'active' : ''}>
+              <NavLink to={`/ask-ai?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiChatAiLine className="icon" />
+                <span>Ask AI</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/consultation' ? 'active' : ''}>
+              <NavLink to={`/consultation?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiChatSmile3Line className="icon" />
+                <span>Consultation</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/transaction' ? 'active' : ''}>
+              <NavLink to={`/transaction?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiExchangeDollarLine className="icon" />
+                <span>Transaction</span>
+              </NavLink>
+            </li>
+          </ul>
+        ) : (
+          <ul>
+            <li className={location.pathname === '/dashboard' ? 'active' : ''}>
+              <NavLink to={`/dashboard?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiHome6Line className="icon" />
+                <span>Home</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/ask-ai' ? 'active' : ''}>
+              <NavLink to={`/ask-ai?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiChatAiLine className="icon" />
+                <span>Ask AI</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/order' ? 'active' : ''}>
+              <NavLink to={`/order?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiFileList2Line className="icon" />
+                <span>Order</span>
+              </NavLink>
+            </li>
+            <li className={location.pathname === '/report' ? 'active' : ''}>
+              <NavLink to={`/report?canisterId=${frontendCanisterId}`} className="menu-item">
+                <RiFileChartLine className="icon" />
+                <span>Report</span>
+              </NavLink>
+            </li>
+          </ul>
+        )}
       </nav>
 
       <button className="post-btn">
