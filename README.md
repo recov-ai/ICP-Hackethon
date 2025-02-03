@@ -137,7 +137,7 @@ Metalog was built using Web3 and ICP technology to create fast, secure and effic
 
 - SweetAlert2 → User-friendly alert dialogs.
 
-**Autentikasi & Keamanan:**
+**Authentication & Security:**
 
 - Internet Identity (II) → Secure authentication using Web3 identity.
 
@@ -145,13 +145,13 @@ Metalog was built using Web3 and ICP technology to create fast, secure and effic
 
 - ICP Principal ID → Unique decentralized user identity.
 
-**Penyimpanan & Database:**
+**Storage & Databases:**
 
 - Stable Memory (ICP) → Stores data persistently on the ICP blockchain.
 
 - ICP Web3 Storage → Blockchain-based file storage and transactions.
 
-**Pembayaran & Wallet Web3:**
+**Web3 Payments & Wallets:**
 
 - ICP Tokens → Used for in-app transactions.
 
