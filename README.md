@@ -31,7 +31,7 @@ sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 dfx --version
 
 # Clone repository & install dependencies
-git clone https://github.com/your-repo/metalog.git
+git clone https://github.com/recov-ai/ICP-Hackethon.git metalog
 
 cd metalog
 
